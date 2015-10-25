@@ -28,10 +28,13 @@ I have made my code 'run_analysis.R' very informative. I have written several co
 
 The following is briefly a summary description of what my code does to fulfill the project requirements:
 
-1) The first chunk (heading of chunks in the code) of my code merges the training and the test sets to create one data set.
-2) The second chunk cleans the data, gives clean variable names to the tables, and extracts only the measurements on the mean and standard deviation for each measurement. This fulfills points 2 and 4. 
-3) The third chunk uses descriptive activity names to name the activities in the data set. 
-4) The fourth chunk of code creates a second, independent tidy data set with the average of each variable for each activity and each subject.
+1) The first chunk (heading of chunks in the code) of my code merges the training and the test sets to create one data set (part 1 of project).
+
+2) The second chunk cleans the data, gives clean variable names to the tables, and extracts only the measurements on the mean and standard deviation for each measurement. This fulfills parts 2 and 4 of the project.
+
+3) The third chunk uses descriptive activity names to name the activities in the data set. This fulfills part 3 of the project.
+
+4) The fourth chunk of code creates a second, independent tidy data set with the average of each variable for each activity and each subject. This finished part 5 and the project.
 
 # CodeBook
 
