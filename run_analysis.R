@@ -1,3 +1,5 @@
+# 1st Chunk
+
 setwd("C:/Users/neeraj.chaddha/Desktop/Coursera/Data Science Specialization JHU/03 Getting and Cleaning Data/project/project")
 # In the above line, I set the working directory to a location of my choice, containing all the files that will be needed in this analyis
 
@@ -20,6 +22,8 @@ train<-cbind(student_ID_train,activity_train,data_train)   #ALL Analogous/same a
 total_data<-rbind(test,train)  #All data binded together as asked in Step 1 of project
 
 
+
+# 2nd Chunk
 features<-read.table("features.txt")  #Importing the dataframe containing variable names
 names<-features$V2
 names(total_data)<-c("student.id","activity",as.character(names))  #Assigning variable names to data frame
@@ -39,6 +43,8 @@ data_mean_sd<-select(total_data,student.id,activity,contains(".mean."),contains(
 # so that only variables on the mean and standard deviation for each measurement are extracted (as asked in step 2 of project)
 #, and variables like meanFreq etc. are not extracted.
 
+
+# 3rd Chunk
 k<-names(data_mean_sd)[match(names(total_data),names(data_mean_sd))]
 k<-k[!is.na(k)]
 data_mean_sd<-select(total_data,one_of(k))  #Extracting only relevant columns, i.e, Student ID, Activity, and all mean and sd measurements of the measurements
@@ -48,6 +54,8 @@ data_mean_sd$activity<-factor(data_mean_sd$activity,labels=c("WALKING","WALKING_
 #Now the data is merged (training and test), relevant columns are extracted (mean and std), 
 # columns have been named properly, and descriptive activity names have been used in the activity column
 
+
+#4th Chunk
 ans<-data_mean_sd%>%
   group_by(student.id,activity)%>%
   summarise_each(funs(mean))  #Performing Step 5, creating an independent tidy data set with the average of each variable for each activity and each subject.
