@@ -1,6 +1,6 @@
 # Getting and Cleaning Data Project
 
--Neeraj
+-Neeraj Chaddha.
 
 This repository/repo is for the submission of the course project in the Coursera course Getting and Cleaning Data from the Data Science Specialization from JHU.
 
